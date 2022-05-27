@@ -65,6 +65,7 @@ class Minesweeper {
     public int pick(int x, int y) {
         int numOfMine = 0;
         // todo
+        numOfpick++;
         if (map[x][y] != 1) {
 
             int x_start = Math.max(x - 1, 0);
@@ -85,7 +86,6 @@ class Minesweeper {
         } else {
             return -1;
         }
-        numOfpick++;
         return numOfMine;
     }
 
