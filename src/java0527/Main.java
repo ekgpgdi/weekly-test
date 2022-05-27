@@ -85,6 +85,7 @@ class Minesweeper {
         } else {
             return -1;
         }
+        numOfpick++;
         return numOfMine;
     }
 
