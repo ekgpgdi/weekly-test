@@ -8,8 +8,8 @@ public class Main {
         Subnet subnet_d = new Subnet(4, "172.31.48.0/20", "ap-northeast-2d");
 
         GateWay internetGateWay = new InternetGateWay();
-        GateWay natGateWay = new NatGateWay(subnet_d); // infinity loop error
-//        GateWay natGateWay = new NatGateWay(subnet_a); // success
+//        GateWay natGateWay = new NatGateWay(subnet_d); // infinity loop error
+        GateWay natGateWay = new NatGateWay(subnet_a); // success
         RouteTable publicRouteTable = new RouteTable();
         RouteTable privateRouteTable = new RouteTable();
 

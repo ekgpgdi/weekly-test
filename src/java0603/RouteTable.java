@@ -8,7 +8,7 @@ public class RouteTable {
     private GateWay gateWay;
     private List<Subnet> subnetList = new ArrayList<>();
 
-    public void setGateWay(GateWay gateWay){
+    public void setGateWay(GateWay gateWay) {
         this.gateWay = gateWay;
     }
 
@@ -18,10 +18,6 @@ public class RouteTable {
     }
 
     public void route(int id, String msg) {
-        for (Subnet subnet:subnetList) {
-            if(subnet.getId() == id){
-                gateWay.send(msg);
-            }
-        }
+        gateWay.send(msg);
     }
 }
